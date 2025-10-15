@@ -1,0 +1,23 @@
+CREATE OR REPLACE FILE FORMAT my_csv_format
+  TYPE = 'CSV'
+  FIELD_DELIMITER = ','
+  SKIP_HEADER = 1;
+
+  CREATE OR REPLACE FILE FORMAT my_json_format
+  TYPE = 'JSON'
+ 
+ CREATE OR REPLACE FILE FORMAT my_avro_format
+  TYPE = 'AVRO'
+
+  CREATE OR REPLACE FILE FORMAT my_xml_format
+    TYPE = 'XML'
+    COMPRESSION = AUTO
+    PRESERVE_SPACE = TRUE;
+
+    CREATE OR REPLACE FILE FORMAT my_parquet_format
+    TYPE = 'PARQUET'
+    COMPRESSION = 'SNAPPY';
+
+
+show file formats;
+DESC FILE FORMATS practice.public;
